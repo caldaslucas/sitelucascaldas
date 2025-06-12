@@ -1718,12 +1718,26 @@ cartão de visitas, envelope ofício e envelope saco</span>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.classList.remove('elementor-invisible');
+          el.classList.add('fadeInUp');
+          el.style.animationDuration = '1s';
+          el.style.animationFillMode = 'both';
+          observer.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
     document.querySelectorAll('.elementor-invisible').forEach(el => {
-      el.classList.remove('elementor-invisible');
+      observer.observe(el);
     });
   });
 </script>
-
 
 </body>
 </html>
