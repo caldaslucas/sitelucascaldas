@@ -1716,5 +1716,14 @@ cartão de visitas, envelope ofício e envelope saco</span>
 <script src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.29.2" id="elementor-frontend-js"></script>
 <script src="wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.elementor-invisible').forEach(el => {
+      el.classList.remove('elementor-invisible');
+    });
+  });
+</script>
+
+
 </body>
 </html>
