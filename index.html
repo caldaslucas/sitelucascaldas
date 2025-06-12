@@ -1764,6 +1764,22 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- Slick JS -->
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<script>
+  jQuery(document).ready(function($) {
+    $('.list-carousel-slick').each(function(){
+      var $this = $(this);
+      if (!$this.hasClass('slick-initialized')) {
+        $this.slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        });
+      }
+    });
+  });
+</script>
 
 	
 	
