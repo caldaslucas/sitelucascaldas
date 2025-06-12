@@ -1716,28 +1716,57 @@ cartão de visitas, envelope ofício e envelope saco</span>
 <script src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.29.2" id="elementor-frontend-js"></script>
 <script src="wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js"></script>
 
+<!-- CORREÇÃO ANIMAÇÃO FADE IN UP + SCROLL -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const settings = el.getAttribute('data-settings');
+        let delay = 0;
+
+        if (settings) {
+          try {
+            const parsed = JSON.parse(settings.replace(/&quot;/g, '"'));
+            delay = parsed._animation_delay || 0;
+          } catch (e) {
+            console.error("Erro ao ler delay:", e);
+          }
+        }
+
+        setTimeout(() => {
           el.classList.remove('elementor-invisible');
           el.classList.add('fadeInUp');
           el.style.animationDuration = '1s';
           el.style.animationFillMode = 'both';
-          observer.unobserve(el);
-        }
-      });
-    }, {
-      threshold: 0.2
-    });
+        }, delay);
 
-    document.querySelectorAll('.elementor-invisible').forEach(el => {
-      observer.observe(el);
+        observer.unobserve(el);
+      }
     });
+  }, {
+    threshold: 0.2
   });
+
+  document.querySelectorAll('.elementor-invisible').forEach(el => {
+    observer.observe(el);
+  });
+});
 </script>
+
+	
+<!-- CORREÇÃO CARROSEL -->
+<script src="wp-content/plugins/the-plus-addons-for-elementor-page-builder/assets/js/main/carousel-anything/plus-carousel-anything.min.js"></script>
+
+<!-- Slick CSS (se já não estiver incluído) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+	
+	
 
 </body>
 </html>
