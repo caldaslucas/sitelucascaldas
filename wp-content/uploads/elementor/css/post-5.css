@@ -11,15 +11,30 @@
     --e-global-color-900a577:#8D8D8D;
     --e-global-color-7a9c0e7:#F3EEE2;
     --e-global-color-4bc92aa:#4882FA;
-    /* Fonte primária: 'Anek Latin' com configurações de variação */
-    --e-global-typography-primary-font-family:"Anek Latin";
+
+    /* Altere esta linha para incluir a fonte local como primeira opção */
+    --e-global-typography-primary-font-family:"Anek Latin Complete", "Anek Latin", sans-serif;
     --e-global-typography-primary-font-size:62px;
     --e-global-typography-primary-font-weight:800;
-    /* Adicione esta linha para controlar a largura/expansão */
-    /* Exemplo: 'wdth' 100 para a largura máxima/expanded */
-    --e-global-typography-primary-font-variation-settings:'wdth' 100;
+    --e-global-typography-primary-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */
+    
+    /* ... outras definições de fonte ... */
+    
+    /* Altere esta linha para incluir a fonte local como primeira opção */
+    --e-global-typography-3829ed1-font-family:"Anek Latin Complete", "Anek Latin", sans-serif;
+    --e-global-typography-3829ed1-font-size:34px;
+    --e-global-typography-3829ed1-font-weight:300;
+    --e-global-typography-3829ed1-line-height:36px;
+    --e-global-typography-3829ed1-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */
+    
+    /* Altere esta linha para incluir a fonte local como primeira opção */
+    --e-global-typography-0a305e6-font-family:"Anek Latin Complete", "Anek Latin", sans-serif;
+    --e-global-typography-0a305e6-font-size:46px;
+    --e-global-typography-0a305e6-font-weight:800;
+    --e-global-typography-0a305e6-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */ 
 
-    /* EB Garamond permanece */
+    
+        /* EB Garamond permanece */
     --e-global-typography-secondary-font-family:"EB Garamond";
     --e-global-typography-secondary-font-size:22px;
     --e-global-typography-secondary-font-weight:700;
