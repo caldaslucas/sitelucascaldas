@@ -54,20 +54,6 @@
     --e-global-typography-a705624-font-size:14px;
     --e-global-typography-a705624-font-weight:400;
 
-    /* Fonte corrigida: 'Anek Latin' com configurações de variação */
-    --e-global-typography-3829ed1-font-family:"Anek Latin Light" "Anek Latin", sans-serif;;
-    --e-global-typography-3829ed1-font-size:34px;
-    --e-global-typography-3829ed1-font-weight:300;
-    --e-global-typography-3829ed1-line-height:36px;
-
-    /* Adicione esta linha para controlar a largura/expansão 
-    --e-global-typography-3829ed1-font-variation-settings:'wdth' 100; */
-
-    /* Fonte corrigida: 'Anek Latin' com configurações de variação */
-    --e-global-typography-0a305e6-font-family:"Anek Latin Expanded Light", "Anek Latin", sans-serif;;
-    --e-global-typography-0a305e6-font-size:46px;
-    --e-global-typography-0a305e6-font-weight:300;
-
     /* Libre Franklin permanece */
     --e-global-typography-f2e725c-font-family:"Libre Franklin", Sans-serif;
     --e-global-typography-f2e725c-font-size:16px;
