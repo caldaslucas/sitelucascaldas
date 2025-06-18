@@ -73,6 +73,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     text-align: right;
     margin: 0 auto;
   }
+
+  .elementor-element-82730d8 {
+    padding: 20px;
+  }
+
+  body {
+    background-color: #FFFCF5;
+  }
 </style>
 	
 <link rel="stylesheet" id="theplus-plus-extra-adv-plus-extra-adv-css" href="wp-content/plugins/the-plus-addons-for-elementor-page-builder/assets/css/main/plus-extra-adv/plus-extra-adv.min.css" media="all">
@@ -118,7 +126,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	src: url('/fonts/AnekLatin_Expanded-Light.woff2') format('woff2'),
 }</style>
 
-<!-- Gambiarra elementos do primeiro bloco a direita -->
+<!-- gambiarra elementos do primeiro bloco a direita -->
 <style>
   @media (max-width: 768px) {
     .mobile-right-align {
@@ -172,9 +180,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
   overflow: hidden;
 }
 
+/* o delay é pra melhorar o LCP */
 .gradiente-animado::before {
   content: "";
   position: absolute;
+  animation-delay: 2s; 
   inset: 0;
   background: radial-gradient(circle at center bottom, #6BA0F4, #FFFCF5, #FFFCF5);
   background-size: 100% 100%;
