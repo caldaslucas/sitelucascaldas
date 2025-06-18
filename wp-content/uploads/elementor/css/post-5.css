@@ -21,17 +21,17 @@
     /* ... outras definições de fonte ... */
     
     /* Altere esta linha para incluir a fonte local como primeira opção */
-    --e-global-typography-3829ed1-font-family:"Anek Latin Expanded", "Anek Latin", sans-serif;
+    --e-global-typography-3829ed1-font-family:"Anek Latin Expanded Light", "Anek Latin", sans-serif;
     --e-global-typography-3829ed1-font-size:34px;
-    --e-global-typography-3829ed1-font-weight:800;
+    --e-global-typography-3829ed1-font-weight:300;
     --e-global-typography-3829ed1-line-height:36px;
-    --e-global-typography-3829ed1-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */
+    /* --e-global-typography-3829ed1-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */
     
     /* Altere esta linha para incluir a fonte local como primeira opção */
-    --e-global-typography-0a305e6-font-family:"Anek Latin  Light", "Anek Latin", sans-serif;
+    --e-global-typography-0a305e6-font-family:"Anek Latin Expanded", "Anek Latin", sans-serif;
     --e-global-typography-0a305e6-font-size:46px;
-    --e-global-typography-0a305e6-font-weight:300;
-    --e-global-typography-0a305e6-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */ 
+    --e-global-typography-0a305e6-font-weight:800;
+   /* --e-global-typography-0a305e6-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */ 
 
     
         /* EB Garamond permanece */
