@@ -71,9 +71,16 @@
 <link rel="preload" as="font" href="/fonts/AnekLatin_Expanded-ExtraBold.woff2" type="font/woff2" crossorigin="anonymous">
 	
 <!-- Fontes principais carregadas do Google (somente as que serão usadas com frequência) -->
-<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+<!--media="print" com onload="this.media='all'" impede o bloqueio da renderização. noscript garante que quem desativou JS ainda veja o conteúdo corretamente. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300..800&display=swap" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400..800&display=swap">
+</noscript>
+
 
 <!-- gambiarra elementos do primeiro bloco a direita -->
 <style>
