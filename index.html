@@ -1959,6 +1959,29 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 
+<!-- forçar o lazy load -->
+<script>
+  window.addEventListener("load", () => {
+    const swiperEls = document.querySelectorAll(".swiper");
+
+    swiperEls.forEach((el) => {
+      const instance = el.swiper;
+
+      if (instance) {
+        instance.params.lazy = {
+          loadOnTransitionStart: true,
+          loadPrevNext: true
+        };
+        instance.params.preloadImages = false;
+
+        // Atualiza a instância
+        instance.lazy.load();
+      }
+    });
+  });
+</script>
+	
+
 <!-- só ativa o lazy quando o Swiper estiver pronto e tiver imagens válidas -->	
 <script>
   window.addEventListener("load", () => {
@@ -1988,7 +2011,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 	
-<!-- 1740  -->
+<!-- 1746  -->
 	
 </body>
 </html>
