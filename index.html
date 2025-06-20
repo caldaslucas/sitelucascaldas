@@ -1958,7 +1958,30 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 	
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-<!-- 1648 -->
+
+<!-- forçar a ativação do lazy no Swiper-->	
+<script>
+  window.addEventListener("load", () => {
+    const swiperEls = document.querySelectorAll(".swiper");
+
+    swiperEls.forEach((el) => {
+      const instance = el.swiper;
+
+      if (instance) {
+        instance.params.lazy = {
+          loadOnTransitionStart: true,
+          loadPrevNext: true
+        };
+        instance.params.preloadImages = false;
+
+        // Atualiza a instância
+        instance.lazy.load();
+      }
+    });
+  });
+</script>
+	
+<!-- 1733 -->
 	
 </body>
 </html>
