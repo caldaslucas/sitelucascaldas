@@ -1973,37 +1973,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
-
-<!-- só ativa o lazy quando o Swiper estiver pronto e tiver imagens válidas -->	
-<script>
-  window.addEventListener("load", () => {
-    const swipers = document.querySelectorAll(".swiper");
-
-    swipers.forEach((swiperEl) => {
-      const swiperInstance = swiperEl.swiper;
-
-      if (
-        swiperInstance &&
-        swiperInstance.params &&
-        swiperInstance.params.lazy !== undefined
-      ) {
-        // Garante que o preload está desativado
-        swiperInstance.params.preloadImages = false;
-        swiperInstance.params.lazy.loadOnTransitionStart = true;
-        swiperInstance.params.lazy.loadPrevNext = true;
-
-        // Só chama load se houver imagens swiper-lazy dentro
-        const lazyImages = swiperEl.querySelectorAll(".swiper-lazy");
-        if (lazyImages.length > 0) {
-          swiperInstance.lazy.load();
-        }
-      }
-    });
-  });
-</script>
-
-	
-<!-- 1804  -->
+<!-- 1807  -->
 	
 </body>
 </html>
