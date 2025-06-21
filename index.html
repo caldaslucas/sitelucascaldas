@@ -1968,43 +1968,7 @@ cartão de visitas, envelope ofício e envelope saco</span>
 
 
 <!-- CORREÇÃO ANIMAÇÃO FADE IN UP + SCROLL -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const settings = el.getAttribute('data-settings');
-        let delay = 0;
 
-        if (settings) {
-          try {
-            const parsed = JSON.parse(settings.replace(/&quot;/g, '"'));
-            delay = parsed._animation_delay || 0;
-          } catch (e) {
-            console.error("Erro ao ler delay:", e);
-          }
-        }
-
-        setTimeout(() => {
-          el.classList.remove('elementor-invisible');
-          el.classList.add('fadeInUp');
-          el.style.animationDuration = '1s';
-          el.style.animationFillMode = 'both';
-        }, delay);
-
-        observer.unobserve(el);
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  document.querySelectorAll('.elementor-invisible').forEach(el => {
-    observer.observe(el);
-  });
-});
-</script>
 	
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 
@@ -2030,7 +1994,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", waitForSwiper);
 </script>
 
-<!-- 0051  -->
+<!-- 0137  -->
 	
 </body>
 </html>
