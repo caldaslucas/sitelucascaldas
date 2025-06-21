@@ -2010,19 +2010,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- forçando lazy=true no swiper -->
 <script>
-  window.addEventListener("load", () => {
-    const swiperEls = document.querySelectorAll(".swiper");
-    swiperEls.forEach((swiperEl) => {
+ const waitForSwiper = () => {
+  const swiperEls = document.querySelectorAll(".swiper");
+
+  swiperEls.forEach(swiperEl => {
+    const checkInterval = setInterval(() => {
       const swiper = swiperEl.swiper;
-      if (swiper && swiper.params && !swiper.params.lazy.enabled) {
-        swiper.params.lazy.enabled = true;
-        swiper.lazy.load(); // força carregamento se necessário
+      if (swiper && swiper.params) {
+        if (!swiper.params.lazy.enabled) {
+          swiper.params.lazy.enabled = true;
+          swiper.lazy.load();
+        }
+        clearInterval(checkInterval);
       }
-    });
+    }, 200); // tenta a cada 200ms
   });
+};
+
+document.addEventListener("DOMContentLoaded", waitForSwiper);
 </script>
 
-<!-- xxxx  -->
+<!-- 0051  -->
 	
 </body>
 </html>
