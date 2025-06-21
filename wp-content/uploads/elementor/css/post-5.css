@@ -15,7 +15,7 @@
     /* Altere esta linha para incluir a fonte local como primeira opção */
     --e-global-typography-primary-font-family:"Anek Latin Expanded", "Anek Latin", sans-serif;
     --e-global-typography-primary-font-size:62px;
-    --e-global-typography-primary-font-weight:800;
+    --e-global-typography-primary-font-weight:700;
     --e-global-typography-primary-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */
     
     /* ... outras definições de fonte ... */
@@ -30,7 +30,7 @@
     /* Altere esta linha para incluir a fonte local como primeira opção */
     --e-global-typography-0a305e6-font-family:"Anek Latin Expanded", "Anek Latin", sans-serif;
     --e-global-typography-0a305e6-font-size:46px;
-    --e-global-typography-0a305e6-font-weight:800;
+    --e-global-typography-0a305e6-font-weight:700;
    /* --e-global-typography-0a305e6-font-variation-settings:'wdth' 100; /* Mantém a configuração expanded */ 
 
     
