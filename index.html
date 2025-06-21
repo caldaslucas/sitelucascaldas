@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
 <head>
+	
+<!-- delay no render pra melhorar CLS -->
+<style>
+    html.loading body {
+      visibility: hidden;
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('loading');
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.documentElement.classList.remove('loading');
+      }, 100); // experimente 50–200ms
+    });
+  </script>
+	
 <!--mais uma tentativa de resolver lcp -->
 <style>
 @font-face {
@@ -2014,7 +2030,7 @@ cartão de visitas, envelope ofício e envelope saco</span>
 document.addEventListener("DOMContentLoaded", waitForSwiper);
 </script>
 
-<!-- 1548  -->
+<!-- 1633  -->
 	
 </body>
 </html>
