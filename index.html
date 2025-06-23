@@ -2004,29 +2004,7 @@ cartão de visitas, envelope ofício e envelope saco</span>
 
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 
-<!-- forçando lazy=true no swiper -->
-<script>
- const waitForSwiper = () => {
-  const swiperEls = document.querySelectorAll(".swiper");
-
-  swiperEls.forEach(swiperEl => {
-    const checkInterval = setInterval(() => {
-      const swiper = swiperEl.swiper;
-      if (swiper && swiper.params) {
-        if (!swiper.params.lazy.enabled) {
-          swiper.params.lazy.enabled = true;
-          swiper.lazy.load();
-        }
-        clearInterval(checkInterval);
-      }
-    }, 200); // tenta a cada 200ms
-  });
-};
-
-document.addEventListener("DOMContentLoaded", waitForSwiper);
-</script>
-
-<!-- 1336  -->
+<!-- 1340  -->
 	
 </body>
 </html>
