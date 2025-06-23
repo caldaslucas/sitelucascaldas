@@ -2003,31 +2003,29 @@ cartão de visitas, envelope ofício e envelope saco</span>
 </script>
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 
-<!-- forçando lazy=true no swiper versao nova -->
+<!-- forçando lazy=true no swiper -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.elementor-image-carousel-wrapper.swiper', {
-    loop: true,
-    slidesPerView: 1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    lazy: {
-      loadPrevNext: true,
-      loadOnTransitionStart: true
-    },
-    on: {
-      init: function () {
-        this.lazy.load(); // força a primeira imagem
-      }
-    }
-  });
-});
-</script>
+ const waitForSwiper = () => {
+  const swiperEls = document.querySelectorAll(".swiper");
 
+  swiperEls.forEach(swiperEl => {
+    const checkInterval = setInterval(() => {
+      const swiper = swiperEl.swiper;
+      if (swiper && swiper.params) {
+        if (!swiper.params.lazy.enabled) {
+          swiper.params.lazy.enabled = true;
+          swiper.lazy.load();
+        }
+        clearInterval(checkInterval);
+      }
+    }, 200); // tenta a cada 200ms
+  });
+};
+
+document.addEventListener("DOMContentLoaded", waitForSwiper);
+</script>
 	
-<!-- 1344  -->
+<!-- 1347  -->
 	
 </body>
 </html>
