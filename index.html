@@ -2001,10 +2001,33 @@ cartão de visitas, envelope ofício e envelope saco</span>
   }
 })();
 </script>
-
 <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 
-<!-- 1340  -->
+<!-- forçando lazy=true no swiper versao nova -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  new Swiper('.elementor-image-carousel-wrapper.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    lazy: {
+      loadPrevNext: true,
+      loadOnTransitionStart: true
+    },
+    on: {
+      init: function () {
+        this.lazy.load(); // força a primeira imagem
+      }
+    }
+  });
+});
+</script>
+
+	
+<!-- 1344  -->
 	
 </body>
 </html>
